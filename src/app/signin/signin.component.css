@@ -1,0 +1,16 @@
+#main {
+    background-color:lightblue;
+    height: 400px;
+    padding: 30px;
+    text-align: center;
+}
+#Btn {
+    border: 2px solid rgb(39, 204, 44);
+    background-color: rgb(39, 204, 44);
+    border-radius: 20px;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    width: 500px;
+    font-size: 20px;
+}

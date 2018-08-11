@@ -1,0 +1,36 @@
+<div class="chat">
+  <strong>#ChatApp</strong>
+<input type="text" id="channel1" placeholder="Enter Channel Name" [(ngModel)]='ForAdd'/>
+<button id="addchannel" type="button" (click)="AddButtonClicked(ForAdd)">Add Channel</button>
+
+<br/>
+<input type="text" id="SearchChannel" placeholder="Search Channel Name" [(ngModel)]=ForSearch/>
+<button id="searchchannel" type="button" (click)="SearchButtonClicked(ForSearch)"[disabled]="!ForSearch">Search Channel</button>
+{{MyVar}}
+<br/>
+<button id="display" type="button" (click)="Display()">All Channels</button>
+<ul *ngFor = "let channel of channelArr"(click)="AllChannel(channel)"[id]="channel">
+    <li>{{channel}}</li>
+  </ul>
+  <button id="addchannel" type="button" (click)="SubscribedChannels()">Subscribed Channels</button>
+  <ul><li *ngFor ="let channel of channelName" (click)="viewChannelmessage(channel)"[id]="channell">{{channell}}</li></ul>
+</div>
+<div class="show">
+  <div class="sendmessage">
+<input type="text" id="SearchChannel" placeholder="Type Message here" [(ngModel)]="Message"/>
+<button id="searchchannel" type="button" (click)="Send()">Send Message</button>
+
+
+</div>
+<ul *ngFor = "let messagedetail of msgArr">
+  <li>{{messagedetail}}</li>
+</ul>
+
+</div>
+<div class="signout">
+  <button class="button"(click)="signout()">
+    <span class="glyphicon glyphicon-log-out"></span>Sign OUt
+  </button>
+</div>
+
+<!-- <h1>{{msgArr}}</h1> -->
